@@ -31,17 +31,22 @@ const Home = () => {
   };
 
   return (
-    <div >
-      <h1>Paste link image to download </h1>
-      <form onSubmit={handleSubmit} className="w-full">
+    <div>
+      <h1 className="pb-4">Paste link image to download </h1>
+      <form onSubmit={handleSubmit} className="w-full space-y-4">
         <input
-        className="min-w-[800px] w-full p-2 border border-gray-300 rounded-lg"
+          className="min-w-[800px] w-full p-2 rounded-lg border-gray-300  focus:border-none border-none"
           type="text"
           placeholder="Paste link image"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
         />
-        <button type="submit">Download</button>
+        <button
+          type="submit"
+          className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-purple-600 to-purple-400"
+        >
+          Download
+        </button>
       </form>
     </div>
   );
